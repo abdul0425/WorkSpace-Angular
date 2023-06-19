@@ -1,0 +1,23 @@
+
+<table border="2px" class="table">
+    <thead>
+        <tr>
+            <th>Name :</th>
+            <th>Price :</th>
+            <th>Brand : </th>
+            <th>Image : </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of tableVar">
+            <td>{{pro.title}}</td>
+            <td>{{pro.price}}</td>
+            <td>{{pro.brand}}</td>
+            <td><app-image [imageUrl]="pro.images[0]"></app-image></td>
+            <!-- <td><img [src]="pro.images[0]"></td> -->
+        </tr>
+    </tbody>
+</table>
+
+
+

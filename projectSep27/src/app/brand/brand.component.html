@@ -1,0 +1,18 @@
+<h1>Car & Mobile Showroom !</h1>
+
+<table border="2px">
+    <thead>
+        <tr>
+            <th>Brand</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of data">
+            <td>{{c.name}}</td>
+            <td>{{c.type}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<app-model [src] = "ModelData" (modalEvent) ="receiveData($event)"></app-model>

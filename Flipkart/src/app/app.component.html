@@ -1,0 +1,48 @@
+<h1>Flipkart App : </h1>
+
+<app-product></app-product>
+<!-- <app-table></app-table> -->
+<app-image></app-image>
+
+<!-- <input type="text" [(ngModel)]="subjectName" (change)="onChange()"> -->
+<!-- <input type="text" [value]="subjectName" (change)="onChange()"> -->
+
+<ul>
+    <li *ngFor="let x of element">
+        <h3>{{x}}</h3>    
+    </li>
+</ul>
+<hr>
+<ul>
+    <li *ngFor="let x of element">
+        <h3 *ngIf="x=='vivo'">{{x}}</h3>    
+    </li>
+</ul>
+<hr>
+<div *ngIf=isValid>
+    <h2>Display if it is true :</h2>
+</div>
+<div>
+    <h2>Display if it is false :</h2>
+</div>
+<hr>
+<h2>Ng Template --</h2>
+<div *ngIf="isValid ; else displayInfo">
+    <h1>Display if true .</h1>
+</div>
+<ng-template #displayInfo>
+    <div>
+        <h1>Display if false .</h1>
+    </div>
+</ng-template>
+<hr>
+<ul ngSwitch={{mobile}}>
+    <li *ngSwitchCase="'apple'">apple</li>
+    <li *ngSwitchCase="'samsung'">samsung</li>
+    <li *ngSwitchCase="'vivo'">vivo</li>
+    <li *ngSwitchCase="'pocco'">pocco</li>
+    <li *ngSwitchCase="'xiaomi'">xiaomi</li>
+</ul>
+
+
+

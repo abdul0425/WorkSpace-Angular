@@ -1,0 +1,22 @@
+<table border="2px" class="table">
+    <thead>
+        <tr>
+            <th>Title : </th>
+            <th>Price : </th>
+            <th>Brand  : </th>
+            <th>Thumbnail : </th>
+            <th>Images : </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let z of tableVar">
+            <td>{{z.title}}</td>
+            <td>{{z.price}}</td>
+            <td>{{z.brand}}</td>
+            <td><app-image [thumbnail]="z.thumbnail"></app-image></td>
+            <td><app-image [image]="z.images[0]"></app-image></td>
+            <!-- <td><img [src]="z.thumbnail" alt=""></td>
+            <td><img [src]="z.images[0]" alt=""></td> -->
+        </tr>
+    </tbody>
+</table>

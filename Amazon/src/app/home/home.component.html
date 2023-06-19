@@ -1,0 +1,32 @@
+<select (change)="getProductData($event)">
+  <option value="">--select any product--</option>
+  <option [value]="array" *ngFor="let array of product">{{ array }}</option>
+  <!-- <option value="">Mi Mobile</option> -->
+  <!-- <option value="">Iphone 14</option> -->
+</select>
+
+<style>
+  table {
+    width: 250px;
+    height: 10px;
+  }
+</style>
+
+<table border="2px">
+  <thead>
+    <td>Brand Name</td>
+    <td>price</td>
+    <td>color</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of data">
+      <td>{{ a.brandName }}</td>
+      <td>{{ a.price }}</td>
+      <td>{{ a.color }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<input type="text" [(ngModel)]="message"/>
+<br>
+<h2>{{ message }}</h2>

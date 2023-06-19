@@ -1,0 +1,66 @@
+<!-- <h1>Template Driven Form :</h1>
+<br />
+<form #f="ngForm" (ngSubmit)="handleSubmit(f)">
+  <div class="mb-3">
+    <label for="name" class="form-label"><b>Name</b></label>
+    <input
+      type="text"
+      required=""
+      placeholder="name.."
+      class="form-control"
+      id="name"
+      ngModel
+      name="name"
+      #name="ngModel"
+    />
+  </div>
+  <div><span *ngIf="name.invalid && name.touched">field is required..</span></div>
+  <div class="mb-3">
+    <label for="country" class="form-label"><b>Country</b></label>
+    <input
+      type="text"
+      required=""
+      placeholder="country.."
+      class="form-control"
+      id="country"
+      ngModel
+      name="country"
+      #country="ngModel"
+    />
+  </div>
+  <div><span *ngIf="country.invalid&&country.touched">field is required..</span></div>
+  <div class="mb-3">
+    <label for="email" class="form-label"><b>Email address</b></label>
+    <input
+      type="email"
+      required=""
+      class="form-control"
+      placeholder="email.."
+      id="email"
+      ngModel
+      name="email"
+      aria-describedby="emailHelp"
+      #email="ngModel"
+    />
+  </div>
+  <div><span *ngIf="email.invalid&&email.touched">field is required..</span></div>
+  <div class="mb-3">
+    <label for="pswd" class="form-label"><b>Password</b></label>
+    <input
+      type="password"
+      required=""
+      placeholder="password.."
+      class="form-control"
+      id="pswd"
+      ngModel
+      name="pswd"
+      #pswd="ngModel"
+    />
+  </div>
+  <div><span *ngIf="pswd.invalid&&pswd.touched">field is required..</span></div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+</form> -->

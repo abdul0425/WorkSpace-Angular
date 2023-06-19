@@ -1,0 +1,24 @@
+<h2>match-list works!</h2>
+<mat-form-field appearance="fill">
+  <mat-label>Match Type</mat-label>
+  <mat-select (selectionChange)="getSelectedMatchList($event)">
+    <mat-option>...Select Something...</mat-option>
+    <mat-option
+      *ngFor="let match of recentMatchesList"
+      [value]="match.matchType"
+    >
+      {{ match.matchType }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<ag-grid-angular
+  style="width: 100%; height: 100%"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [rowData]="selectedMatchList"
+  [rowSelection]="'multiple'"
+  [animateRows]="true"
+  (rowClicked)="onRowClicked($event)"
+></ag-grid-angular>

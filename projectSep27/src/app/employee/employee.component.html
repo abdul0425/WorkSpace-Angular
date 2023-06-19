@@ -1,0 +1,29 @@
+<h1>Employee Details  !</h1>
+
+<button (click)="getEmployee()">Employee</button>
+<table border="2px" class="table">
+    <thead>
+        <tr>
+            <th>Name  :  </th>
+            <th>Username  :  </th>
+            <th>Email  : </th>
+            <th>Address  : </th>
+            <th>Phone  : </th>
+            <th>Website  : </th>
+            <th>Company Name  : </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of getEmployeeData">
+            <td>{{emp.name}}</td>
+            <td>{{emp.username}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.address.city}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.website}}</td>
+            <td>{{emp.company.name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>.        Thank You !        .</h1>

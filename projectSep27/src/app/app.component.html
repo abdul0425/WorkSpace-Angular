@@ -1,0 +1,41 @@
+<!-- <app-brand [data]="BrandData"></app-brand>
+
+<app-csk></app-csk>
+<app-rcb></app-rcb>
+<app-user></app-user>
+
+<app-employee></app-employee> -->
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="/employee">Employee</a> -->
+            <a class="nav-link active" aria-current="page" routerLink="/employee">Employee</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="/rcb">Rcb</a> -->
+            <a class="nav-link active" aria-current="page" routerLink="/rcb">Rcb</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="/csk">Csk</a> -->
+            <a class="nav-link active" aria-current="page" routerLink="/csk">Csk</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link active" aria-current="page" href="/csk">Csk</a> -->
+            <a class="nav-link active" aria-current="page" routerLink="/first/mobile">Mobile</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <router-outlet></router-outlet>
+

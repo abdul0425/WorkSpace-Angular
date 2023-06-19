@@ -1,0 +1,43 @@
+<div>
+    <form #f="ngForm" (ngSubmit)="formSubmit(f)">
+        <table>
+            <tr>
+                <th>
+                    Name : <input type="text"
+                    class="form-control"
+                    ngModel
+                    required="true"
+                    minlength="5"
+                    #userName="ngModel"
+                    (change)="onChange(userName)"
+                    name="userName">
+                </th>
+                <div class="aler alert-denger" *ngIf="userName.touched && userName.invalid">
+                </div>
+                <div *ngIf="userName.errors && userName.errors['required']">This field is mandatory.</div>
+                <div *ngIf="userName.errors && userName.errors['minlength']">Min 5 characters required. </div>
+            </tr>
+            <tr>
+                <th>
+                    Email : <input type="text">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Contact : <input type="text">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Male <input type="radio" name="gender">
+                </th>
+                <th>
+                    Female <input type="radio" name="gender">
+                </th>
+            </tr>
+            <tr>
+                <th><button>Submit</button></th>
+            </tr>
+        </table>
+    </form>
+</div>
